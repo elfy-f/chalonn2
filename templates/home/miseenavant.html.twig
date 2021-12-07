@@ -1,0 +1,81 @@
+<!-- ARTICLES -->
+<section class="pb-8  pb-md-11 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Heading -->
+                <h2 class="mb-0">
+                    Les petits nouveaux
+                </h2>
+
+
+                <p class="mb-5 text-muted">
+
+                </p>
+
+            </div>
+        </div>
+        <!-- / .row -->
+
+
+        <div class="row">
+            {% for chat in chats %}
+
+            <div class="col-12">
+
+                <!-- Card -->
+                <a class="card card-row shadow-light-lg mb-6 lift lift-lg" data-aos="fade-right">
+                    <div class="row ">
+                        <a class="col-12 col-md-6 bg-cover card-img-start"
+                           style="background-image: url(/uploads/chats/{{ chat.file }});"
+                           href="{{path('chat_details', {'nom':chat.nom })}}">
+
+                            <!-- Image -->
+
+                            <img src="{{ asset('uploads/chats/'~ chat.file) }}"height="400" width="auto" alt="{{ chat.nom }}" class="card-img-top">
+
+
+
+                        </a>
+
+                        <div
+                                class="col-12 col-md-6">
+                            <!-- Body -->
+                            <a class="card-body" href="{{path('chat_details', {'nom':chat.nom })}}">
+
+                                <!-- Heading -->
+                                <h3>
+                                    {{ chat.nom }}
+                                </h3>
+
+
+                                <!-- Text -->
+                                <p class="mb-0 text-muted">
+                                    {{ chat.caractere |u.truncate(200, '...', false) }}
+                                </p>
+
+                            </a>
+                            <!-- Meta -->
+                            <a class="card-meta">
+
+                                <!-- Divider -->
+                                <hr
+                                        class="card-meta-divider">
+
+                            </a>
+
+
+
+
+                        </div>
+                    </div>
+            </div>
+
+
+        {% endfor %}
+        </div>
+    </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>
+

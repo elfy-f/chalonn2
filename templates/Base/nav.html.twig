@@ -1,0 +1,113 @@
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="{{ path('home') }}">
+            <img src="{{ asset('img/new_logo.png') }}" class="w-50 navbar-brand-img " alt="...">
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fe fe-x"></i>
+            </button>
+
+            <!-- Navigation -->
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a  href="{{path('adoption')}}" class=" nav-link" >Nos chats à l'adoption</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a  href="{{path('actualites')}}" class=" nav-link" >Actualités</a>
+                </li>
+
+
+
+            {#    <li class="nav-item dropdown">
+                    <a  href="{{ path('libre') }}" class=" nav-link" >Nos chats libres</a>
+                </li> #}
+
+             {#    <li class="nav-item dropdown">
+                    <a  href="{{path('disparu')}}" class=" nav-link" >Nos chers disparus</a>
+                </li>#}
+
+                <li class="nav-item dropdown">
+                    <a  href="{{path('partenaire')}}" class=" nav-link" >Nos partenaires</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{path('a_propos')}}" class="nav-link">
+                        A propos
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarAccount" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                       Nous aider
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarAccount">
+                        <li class="nav-item dropdown">
+                            <a  href="{{ path('fa') }}" class=" nav-link" >Devenir famille d'accueil</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a  href="{{ path('parrain') }}" class=" nav-link" >Parrainer un chat</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a  href="https://www.paypal.com/donate/?token=0SGIhobktM19odeF796iQJ8qe7Rd5CdRaejdIEtQ7_e25g0kWzmqZ021JbnRfPjktaAJf8B9_3TRIQnP&locale.x=FR" class=" nav-link" >Faire un don</a>
+                        </li>
+
+
+
+                        {#   {% if app.user %}
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item dropdown">
+                                    <a  href="{{path('compte')}}" class=" nav-link" >Mon compte</a>
+                                </li>#}
+
+
+                        {#      <li class="nav-item dropdown">
+                                    <a  href="{{path('app_logout')}}" class=" nav-link" >Déconnexion</a>
+                                </li>
+                            </ul>
+
+                        {% else %}
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item dropdown">
+                                    <a  href="{{path('app_login')}}" class=" nav-link" >Me connecter</a>
+                                </li>
+
+
+                               <li class="nav-item dropdown">
+                                    <a  href="{{path('register')}}" class=" nav-link" >M'inscrire</a>
+                                </li>
+                            </ul>
+
+
+                        {% endif %}#}
+
+                       </ul>
+                </li>
+
+                    <!-- Button -->
+                    <a class="navbar-btn btn btn-auto btn-secondary lift lift ms-auto" href="{{path('contact')}}">
+                        Nous contacter
+                    </a>
+
+
+
+        </div>
+
+    </div>
+</nav>
+
